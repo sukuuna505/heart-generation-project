@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+  font-family: Arial, sans-serif;
 }
 
 .main-container {
@@ -11,6 +12,14 @@ body {
   align-items: center;
   height: 100dvh;
   position: relative;
+}
+
+.instructions {
+  color: rgb(52, 185, 197);
+  text-shadow: 0 0 10px rgba(52, 185, 197, 0.5);
+  font-size: 2rem;
+  text-align: center;
+  z-index: 10;
 }
 
 .heart {

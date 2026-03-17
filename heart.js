@@ -4,6 +4,7 @@ let IS_POINTER_DOWN = false;
 const HEART_GENERATION_RATE = 50; // milliseconds between hearts
 let LAST_POINTER_POSITION = { x: 0, y: 0 };
 let heartInterval = null;
+const INSTRUCTIONS = document.querySelector('.instructions');
 
 // Function to generate a heart SVG element
 function generateHeart(position) {
@@ -67,6 +68,7 @@ MAIN_CONTAINER.addEventListener('pointermove', (event) => {
 MAIN_CONTAINER.addEventListener('pointerdown', (event) => {
     IS_POINTER_DOWN = true;
     LAST_POINTER_POSITION = { x: event.clientX, y: event.clientY };
+    INSTRUCTIONS.style.display = 'none';
     
     // Start generating hearts
     startHeartGeneration();
