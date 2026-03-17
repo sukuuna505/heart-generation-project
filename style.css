@@ -1,0 +1,42 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.heart path {
+  fill: red;
+}
+
+.fade-out {
+  animation: heartAnimation 2s forwards;
+}
+
+@keyframes heartAnimation {
+  0% { 
+    transform: translate(-50%, -50%) translateX(0) translateY(0);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% { 
+    transform: translate(-50%, -50%) translateX(var(--drift-x)) translateY(-100px);
+    opacity: 0;
+    filter: hue-rotate(360deg);
+  }
+}
